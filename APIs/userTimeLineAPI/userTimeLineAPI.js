@@ -1,9 +1,9 @@
-var tweetAPI = require('express').Router()
+var userTimeLineAPI = require('express').Router()
 
 
-tweetAPI.get('/', function(req, res) {
-    res.send('tweetAPI... ')
+userTimeLineAPI.get('/', function(req, res) {
+    res.send('userTimeLineAPI... ')
 })
 
 
-module.exports = tweetAPI;
+module.exports = userTimeLineAPI;
