@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-var mediaAPI = require('./APIs/mediaAPI/mediaAPI');
+var mediaDownloadAPI = require('./APIs/mediaDownloadAPI/mediaDownloadAPI');
+var mediaUploadAPI = require('./APIs/mediaUploadAPI/mediaUploadAPI');
 var tweetAPI = require('./APIs/tweetAPI/tweetAPI');
 var searchAPI = require('./APIs/searchAPI/searchAPI');
 var userTimeLineAPI = require('./APIs/userTimeLineAPI/userTimeLineAPI');
@@ -17,7 +18,8 @@ app.get('/', (req, res) => {
     res.send('Hello in the Gateway!')
 })
 
-app.use('/media', mediaAPI);
+app.use('/media', mediaDownloadAPI);
+app.use('/upload', mediaUploadAPI);
 app.use('/tweet', tweetAPI);
 app.use('/search', searchAPI);
 app.use('/user', userTimeLineAPI);
