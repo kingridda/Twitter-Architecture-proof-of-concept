@@ -2,30 +2,30 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
-var mediaAPI = require('./mediaAPI/mediaAPI');
+var mediaAPI = require('./APIs/mediaAPI/mediaAPI');
+var tweetAPI = require('./APIs/tweetAPI/tweetAPI');
+var searchAPI = require('./APIs/searchAPI/searchAPI');
+var userTimeLineAPI = require('./APIs/userTimeLineAPI/userTimeLineAPI');
+var homeTimeLineAPI = require('./APIs/homeTimeLineAPI/homeTimeLineAPI');
+var hashtagTimeLineAPI = require('./APIs/hashtagTimeLineAPI/hashtagTimeLineAPI');
+var directMessagingAPI = require('./APIs/directMessagingAPI/directMessagingAPI');
+var socialGraphAPI = require('./APIs/socialGraphAPI/socialGraphAPI');
+var userAPI = require('./APIs/userAPI/userAPI');
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello in the Gateway!')
 })
 
 app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
-app.use('/media', mediaAPI);
+app.use('/tweet', tweetAPI);
+app.use('/search', searchAPI);
+app.use('/user', userTimeLineAPI);
+app.use('/home', homeTimeLineAPI);
+app.use('/hashtag', hashtagTimeLineAPI);
+app.use('/direct', directMessagingAPI);
+app.use('/social', socialGraphAPI);
+app.use('/profile', userAPI);
 
 
 //The 404 Route (ALWAYS Keep this as the last route)
