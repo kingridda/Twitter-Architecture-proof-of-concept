@@ -1,9 +1,8 @@
 var mediaDownloadAPI = require('express').Router()
+var mediaDownloadService = require('./services/mediaDownloadService')
 
 
-mediaDownloadAPI.get('/', function(req, res) {
-    res.send('getting media (image, video...)')
-});
+mediaDownloadAPI.get('/', mediaDownloadService.download);
 
 
 module.exports = mediaDownloadAPI;
