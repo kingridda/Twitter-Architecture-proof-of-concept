@@ -1,1 +1,1 @@
-"# Twitter-Architecture-proof-of-concept" 
+# Twitter Architecture: proof of concept
