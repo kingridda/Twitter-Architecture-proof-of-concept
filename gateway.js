@@ -14,10 +14,8 @@ var socialGraphAPI = require('./APIs/socialGraphAPI/socialGraphAPI');
 var userAPI = require('./APIs/userAPI/userAPI');
 
 
-app.get('/', (req, res) => {
-    res.send('Hello in the Gateway!')
-})
 
+app.use('/', homeTimeLineAPI);
 app.use('/media', mediaDownloadAPI);
 app.use('/upload', mediaUploadAPI);
 app.use('/tweet', tweetAPI);

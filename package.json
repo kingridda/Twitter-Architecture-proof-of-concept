@@ -18,6 +18,9 @@
     },
     "homepage": "https://github.com/kingridda/Twitter-Architecture-proof-of-concept#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "aws-sdk": "^2.1048.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1"
     }
 }
