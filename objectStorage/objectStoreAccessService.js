@@ -15,12 +15,6 @@ const s3 = new S3({
     secretAccessKey
 })
 
-
-
-
-
-
-
 exports.getObject = () => {
     var bucketParams = {
         Bucket: bucketName
@@ -33,8 +27,6 @@ exports.getObject = () => {
             console.log("Success", data);
         }
     });
-
-
 
     return "media object returned from the slave object/media store (read-only replicas)";
 }

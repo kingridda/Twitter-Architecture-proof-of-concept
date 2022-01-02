@@ -12,11 +12,13 @@ var hashtagTimeLineAPI = require('./APIs/hashtagTimeLineAPI/hashtagTimeLineAPI')
 var directMessagingAPI = require('./APIs/directMessagingAPI/directMessagingAPI');
 var socialGraphAPI = require('./APIs/socialGraphAPI/socialGraphAPI');
 var userAPI = require('./APIs/userAPI/userAPI');
+var authAPI = require('./APIs/authAPI/authAPI');
 
 
 
 app.use('/', homeTimeLineAPI);
 app.use('/media', mediaDownloadAPI);
+app.use('/auth', authAPI);
 app.use('/upload', mediaUploadAPI);
 app.use('/tweet', tweetAPI);
 app.use('/search', searchAPI);
